@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techan Appreciation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="text-center p-4">
+    <p id="techanText" class="text-2xl font-semibold text-gray-800 max-w-2xl mx-auto transition-all duration-300">
+      Pressione espaço para começar 💫
+    </p>
+  </div>
+
+  <script>
+    const messages = [
+      "Techan é extremamente doce",
+      "Techan é bondoso e me ensinou isso",
+      "Techan aceita meus carinhos",
+      "Techan deixa eu futucar",
+      "Techan tem olhos que são um mar que eu poderia naufragar todos os dias",
+      "Techan fala coisas que são profundas e tocam a alma",
+      "Techan ama Ragnarok",
+      "Techan é muito inteligente",
+      "Techan é extremamente resiliente",
+      "Techan tem a melhor comida do mundo",
+      "Techan é esforçado",
+      "Techan tem o contraste do pretinho seu cabelo mais lindo do mundo",
+      "Techan é bobo e silly e me faz rir",
+      "Techan assiste animes comigo",
+      "Techan reassiste animes comigo",
+      "Techan sabe perdoar",
+      "Techan é o possuidor do melhor lugar do mundo",
+      "Techan ta mais gostoso do que nunca",
+      "Techan é forte",
+      "Techan é divertido com todo mundo",
+      "Techan gosta de estar rodeado de amigos, assim como eu",
+      "Techan sabe cuidar de mim",
+      "Techan é extremamente amado por todos os amigos",
+      "Techan é ótimo com crianças",
+      "Techan aprende tudo muito rápido",
+      "Techan me ensinou japonês",
+      "Techan me incentiva a continuar aprendendo",
+      "Techan me faz acreditar que o futuro é possível",
+      "Techan me faz querer me esforçar por ele muito além do que eu jamais faria pra mim mesma",
+      "Techan me aceitou esquisitinha",
+      "Techan me aceitou linda",
+      "Techan é nerdinho",
+      "Techan tem um sorriso absurdamente lindo",
+      "Techan tem um gosto musical maravilhoso",
+      "Techan topa as minhas doideras",
+      "Techan puxa minha orelha quando a doidera é muita",
+      "Techan tem um cheirinho delicioso",
+      "Techan sabe muito sobre perfumes",
+      "Techan é ótimo em dar presentes",
+      "Techan sabe fazer os melhores memes",
+      "Techan tem uma barriguinha linda",
+      "Techan se cuida muito",
+      "Techan é estiloso",
+      "Techan sempre me apresenta coisas legais",
+      "Techan ama gastronomia",
+      "Techan me ensinou a fazer todas as comidas que eu sei",
+      "Techan tem uma voz doce",
+      "Techan tem braços muito bonitos",
+      "Techan cuida dos amigos",
+      "Techan me fez querer ler mais",
+      "Techan me ensinou sobre metafisica",
+      "Techan me ensinou sobre filosofia",
+      "Techan toca vários instrumentos diferentes",
+      "Techan tem o melhor yakimeshi",
+      "Techan sabe improvisar comidas deliciosas mesmo quando parece que não tem ingrediente nenhum",
+      "Techan nunca errou meus pronomes",
+      "Techan adora karaokê",
+      "Techan canta karaokê comigo mesmo eu sendo desafinada",
+      "Techan tem o melhor senso de humor",
+      "Techan chama minha calça de saia",
+      "Techan joga vídeo game comigo",
+      "Techan tem bochechas lindas lindas lindas, que eu amo beijar e apertar",
+      "Techan tem um beijinho extremamente gostoso",
+      "Techan tem um queixinho lindoooooooooooooooo",
+      "Techan faz passeios comigo mesmo quando ele não gosta",
+      "Techan estava comigo nos melhores momentos da minha vida",
+      "Techan estava comigo nos piores momentos da minha vida",
+      "Techan me apresentou o Shippei!!",
+      "Techan usa três exclamações!!!",
+      "Techan me faz me sentir bonita mesmo quando eu me sinto feia",
+      "Techan tem ótimos amigos",
+      "Techan me ensinou a programar",
+      "Techan ensinou nossos amigos a programarem",
+      "Techan patinou no gelo comigo mesmo tendo medo",
+      "Techan foi em montanhas russas comigo mesmo tendo medo",
+      "Techan tira as melhores fotos",
+      "Techan estava comigo quando eu usei saia pela primeira vez",
+      "Techan corta meu cabelo bonitinho",
+      "Techan me fez amar Gohan",
+      "Techan me fez amar sushi",
+      "Techan me fez escutar todos os álbuns do Radiohead, e gostar",
+      "Techan cuidou da minha mamãe",
+      "Techan virou amigo dos meus amigos",
+      "Techan joga Dota",
+      "Techan me perdoou por ter estragado os queijos dele",
+      "Techan sabe me acalmar quando estou nervosa",
+      "Techan me assiste jogando joguinhos",
+      "Techan presta muita atenção nas coisas que eu falo",
+      "Techan gosta de mim mesmo quando  meu cabelo ta feio",
+      "Techan tem o melhor gato do mundo",
+      "Techan tem pintinhas fofíssimas no rostinho",
+      "Techan é super fofo",
+      "Techan é um ótimo programador",
+      "Techan é um ótimo chefe",
+      "Techan sabe de tudo",
+      "Techan me fez querer fazer de tudo pra reconquistar ele",
+      "Techan não desistiu de mim"
+    ];
+
+    const textEl = document.getElementById('techanText');
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        const random = messages[Math.floor(Math.random() * messages.length)];
+        textEl.textContent = random;
+      }
+    });
+
+    document.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        const random = messages[Math.floor(Math.random() * messages.length)];
+        textEl.textContent = random;
+    });
+  </script>
+</body>
+</html>
